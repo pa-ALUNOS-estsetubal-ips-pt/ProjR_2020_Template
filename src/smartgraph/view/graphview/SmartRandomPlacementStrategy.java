@@ -21,36 +21,34 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package brunomsilva.smartgraph.view.graphview;
+package smartgraph.view.graphview;
 
 import java.util.Collection;
+import java.util.Random;
 import com.pa.proj2020.adts.graph.Graph;
 
 /**
- * Contains the method that should be implemented when creating new vertex placement
- * strategies.
+ * Scatters the vertices randomly.
+ * 
+ * @see SmartPlacementStrategy
  * 
  * @author brunomnsilva
  */
-public interface SmartPlacementStrategy {
+public class SmartRandomPlacementStrategy implements SmartPlacementStrategy {
 
-    /**
-     * Implementations of placement strategies must implement this interface.
-     * 
-     * Should use the {@link SmartGraphVertex#setPosition(double, double) }
-     *                  method to place individual vertices.
-     * 
-     * 
-     * @param <V>       Generic type for element stored at vertices.
-     * @param <E>       Generic type for element stored at edges.
-     * @param width     Width of the area in which to place the vertices.
-     * @param height    Height of the area in which to place the vertices.
-     * @param theGraph  Reference to the {@link Graph} containing the graph model.
-     *                  Can use methods to check for additional information
-     *                  pertaining the model.
-     * 
-     * @param vertices  Collection of {@link SmartGraphVertex} to place.
-     *                  
-     */
-    public <V,E> void place(double width, double height, Graph<V,E> theGraph, Collection<? extends SmartGraphVertex<V>> vertices);
+    @Override
+    public <V, E> void place(double width, double height, Graph<V, E> theGraph, Collection<? extends SmartGraphVertex<V>> vertices) {
+        
+        Random rand = new Random();
+
+        for (SmartGraphVertex<V> vertex : vertices) {
+            
+            double x = rand.nextDouble() * width;
+            double y = rand.nextDouble() * height;
+                        
+            vertex.setPosition(x, y);
+          
+        }
+    }
+    
 }

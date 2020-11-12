@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package brunomsilva.smartgraph.view.graphview;
+package smartgraph.view.graphview;
 
 import static javafx.beans.binding.Bindings.createDoubleBinding;
 import javafx.beans.binding.DoubleBinding;

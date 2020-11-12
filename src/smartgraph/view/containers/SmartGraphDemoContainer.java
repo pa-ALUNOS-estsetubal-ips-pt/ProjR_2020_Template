@@ -21,48 +21,34 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package brunomsilva.smartgraph.view.graphview;
+package smartgraph.view.containers;
 
-import javafx.scene.shape.LineTo;
-import javafx.scene.shape.MoveTo;
-import javafx.scene.shape.Path;
+import javafx.scene.control.CheckBox;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import smartgraph.view.graphview.SmartGraphPanel;
 
 /**
- * A shape of an arrow to be attached to a {@link SmartGraphEdge}.
- * 
- * @author brunomnsilva
+ *
+ * @author Bruno Silva
  */
-public class SmartArrow extends Path implements SmartStylableNode {
-    
-    /* Styling proxy */
-    private final SmartStyleProxy styleProxy;
-    
-    public SmartArrow() {
+public class SmartGraphDemoContainer extends BorderPane {
+
+    public SmartGraphDemoContainer(SmartGraphPanel graphView) {
         
-        /* Create this arrow shape */
-        getElements().add(new MoveTo(0, 0));  
-        getElements().add(new LineTo(-5, 5));
-        getElements().add(new MoveTo(0, 0));        
-        getElements().add(new LineTo(-5, -5));    
+        setCenter(new ContentZoomPane(graphView));
         
-        /* Add the corresponding css class */
-        styleProxy = new SmartStyleProxy(this);
-        styleProxy.addStyleClass("arrow");      
+        //create bottom pane with controls
+        HBox bottom = new HBox(10);
+        
+        CheckBox automatic = new CheckBox("Automatic layout");
+        automatic.selectedProperty().bindBidirectional(graphView.automaticLayoutProperty());
+        
+        bottom.getChildren().add(automatic);
+        
+        setBottom(bottom);        
     }
-
-    @Override
-    public void setStyleClass(String cssClass) {
-        styleProxy.setStyleClass(cssClass);
-    }
-
-    @Override
-    public void addStyleClass(String cssClass) {
-        styleProxy.addStyleClass(cssClass);
-    }
-
-    @Override
-    public boolean removeStyleClass(String cssClass) {
-        return styleProxy.removeStyleClass(cssClass);
-    }
+    
+    
     
 }

@@ -21,33 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package brunomsilva.smartgraph.view.graphview;
-
-import com.pa.proj2020.adts.graph.Edge;
-import com.pa.proj2020.adts.graph.Vertex;
+package smartgraph.view.graphview;
 
 /**
- * A graph edge visually connects two {@link Vertex} of type <code>V</code>.
- * <br>
- * Concrete edge implementations used by {@link SmartGraphPanel} should
- * implement this interface as this type is the only one exposed to the user.
- * 
- * @param <E> Type stored in the underlying edge
- * @param <V> Type of connecting vertex
- *
- * @see Vertex
- * @see SmartGraphPanel
+ * A node to which a {@link SmartLabel} can be attached.
  * 
  * @author brunomnsilva
  */
-public interface SmartGraphEdge<E, V> extends SmartStylableNode {
+public interface SmartLabelledNode {
     
-     /**
-     * Returns the underlying (stored reference) graph edge.
+    /**
+     * Own and bind the <code>label</code> position to the desired position.
      * 
-     * @return edge reference 
-     * 
-     * @see SmartGraphPanel
+     * @param label     text label node
      */
-    public Edge<E, V> getUnderlyingEdge();
+    public void attachLabel(SmartLabel label);
+    
+    /**
+     * Returns the attached text label, if any.
+     * 
+     * @return      the text label reference or null if no label is attached
+     */
+    public SmartLabel getAttachedLabel();
+    
 }

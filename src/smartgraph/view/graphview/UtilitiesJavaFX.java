@@ -1,4 +1,4 @@
-package brunomsilva.smartgraph.view.graphview;
+package smartgraph.view.graphview;
 
 import java.util.List;
 import javafx.geometry.Point2D;

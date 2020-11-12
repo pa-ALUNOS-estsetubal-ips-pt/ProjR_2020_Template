@@ -21,34 +21,48 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package brunomsilva.smartgraph.view.containers;
+package smartgraph.view.graphview;
 
-import javafx.scene.control.CheckBox;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import brunomsilva.smartgraph.view.graphview.SmartGraphPanel;
+import javafx.scene.text.Text;
 
 /**
- *
+ * A label contains text and can be attached to any {@link SmartLabelledNode}.
+ * <br>
+ * This class extends from {@link Text} and is allowed any corresponding
+ * css formatting.
+ * 
  * @author Bruno Silva
  */
-public class SmartGraphDemoContainer extends BorderPane {
+public class SmartLabel extends Text implements SmartStylableNode {
+    
+    private final SmartStyleProxy styleProxy;
+    
+    public SmartLabel() {
+        this(0,0,"");
+    }
 
-    public SmartGraphDemoContainer(SmartGraphPanel graphView) {
-        
-        setCenter(new ContentZoomPane(graphView));
-        
-        //create bottom pane with controls
-        HBox bottom = new HBox(10);
-        
-        CheckBox automatic = new CheckBox("Automatic layout");
-        automatic.selectedProperty().bindBidirectional(graphView.automaticLayoutProperty());
-        
-        bottom.getChildren().add(automatic);
-        
-        setBottom(bottom);        
+    public SmartLabel(String text) {
+        this(0, 0, text);
+    }
+
+    public SmartLabel(double x, double y, String text) {
+        super(x, y, text);
+        styleProxy = new SmartStyleProxy(this);
     }
     
-    
+    @Override
+    public void setStyleClass(String cssClass) {
+        styleProxy.setStyleClass(cssClass);
+    }
+
+    @Override
+    public void addStyleClass(String cssClass) {
+        styleProxy.addStyleClass(cssClass);
+    }
+
+    @Override
+    public boolean removeStyleClass(String cssClass) {
+        return styleProxy.removeStyleClass(cssClass);
+    }
     
 }

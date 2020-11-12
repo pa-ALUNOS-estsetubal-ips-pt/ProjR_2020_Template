@@ -21,19 +21,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package brunomsilva.smartgraph.view;
+package smartgraph.view;
 
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import brunomsilva.smartgraph.view.graphview.SmartGraphPanel;
+import smartgraph.view.graphview.SmartGraphPanel;
 import com.pa.proj2020.adts.graph.Vertex;
 import com.pa.proj2020.adts.graph.Graph;
 import com.pa.proj2020.adts.graph.GraphEdgeList;
-import brunomsilva.smartgraph.view.containers.SmartGraphDemoContainer;
-import brunomsilva.smartgraph.view.graphview.SmartCircularSortedPlacementStrategy;
-import brunomsilva.smartgraph.view.graphview.SmartPlacementStrategy;
-import brunomsilva.smartgraph.view.graphview.SmartStylableNode;
+import smartgraph.view.containers.SmartGraphDemoContainer;
+import smartgraph.view.graphview.SmartCircularSortedPlacementStrategy;
+import smartgraph.view.graphview.SmartPlacementStrategy;
+import smartgraph.view.graphview.SmartStylableNode;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

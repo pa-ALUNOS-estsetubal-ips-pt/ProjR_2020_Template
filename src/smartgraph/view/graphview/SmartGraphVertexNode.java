@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package brunomsilva.smartgraph.view.graphview;
+package smartgraph.view.graphview;
 
 import java.util.Collection;
 import java.util.HashSet;

@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package brunomsilva.smartgraph.view.containers;
+package smartgraph.view.containers;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.ReadOnlyDoubleWrapper;

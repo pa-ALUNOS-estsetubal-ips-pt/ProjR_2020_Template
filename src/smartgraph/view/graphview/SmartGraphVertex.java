@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package brunomsilva.smartgraph.view.graphview;
+package smartgraph.view.graphview;
 
 import com.pa.proj2020.adts.graph.Graph;
 import com.pa.proj2020.adts.graph.Vertex;

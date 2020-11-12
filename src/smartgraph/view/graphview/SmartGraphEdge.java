@@ -21,38 +21,33 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package brunomsilva.smartgraph.view.graphview;
+package smartgraph.view.graphview;
+
+import com.pa.proj2020.adts.graph.Edge;
+import com.pa.proj2020.adts.graph.Vertex;
 
 /**
- * Used as a super-type for all different concrete edge implementations by
- * {@link SmartGraphPanel}, e.g., line and curves.
+ * A graph edge visually connects two {@link Vertex} of type <code>V</code>.
  * <br>
- * An edge can have an attached arrow.
+ * Concrete edge implementations used by {@link SmartGraphPanel} should
+ * implement this interface as this type is the only one exposed to the user.
  * 
  * @param <E> Type stored in the underlying edge
  * @param <V> Type of connecting vertex
- * 
- * @see SmartArrow
- * @see SmartGraphEdge
- * @see SmartLabelledNode
+ *
+ * @see Vertex
  * @see SmartGraphPanel
  * 
  * @author brunomnsilva
  */
-public interface SmartGraphEdgeBase<E, V> extends SmartGraphEdge<E, V>, SmartLabelledNode {
+public interface SmartGraphEdge<E, V> extends SmartStylableNode {
     
-    /**
-     * Attaches a {@link SmartArrow} to this edge, binding its position/rotation.
+     /**
+     * Returns the underlying (stored reference) graph edge.
      * 
-     * @param arrow     arrow to attach
-     */
-    public void attachArrow(SmartArrow arrow);
-    
-    /**
-     * Returns the attached {@link SmartArrow}, if any.
+     * @return edge reference 
      * 
-     * @return      reference of the attached arrow; null if none.
+     * @see SmartGraphPanel
      */
-    public SmartArrow getAttachedArrow();
-    
+    public Edge<E, V> getUnderlyingEdge();
 }
