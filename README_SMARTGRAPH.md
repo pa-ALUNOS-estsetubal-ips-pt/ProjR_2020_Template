@@ -287,4 +287,4 @@ You can fork this project or submit a pull request. Pull requests should adhere 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details. **All derivative work should include this license**.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE_SMARTGRAPH.txt) file for details. **All derivative work should include this license**.

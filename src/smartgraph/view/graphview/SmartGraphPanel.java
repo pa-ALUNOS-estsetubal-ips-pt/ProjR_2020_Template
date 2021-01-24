@@ -52,7 +52,6 @@ import javafx.scene.text.Text;
 import javafx.geometry.Point2D;
 import javafx.scene.Scene;
 import com.pa.proj2020.adts.graph.Graph;
-import com.pa.proj2020.adts.graph.Digraph;
 import com.pa.proj2020.adts.graph.Vertex;
 import com.pa.proj2020.adts.graph.Edge;
 
