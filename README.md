@@ -4,7 +4,7 @@ O enunciado está disponibilizado na página do moodle da uc.
 #Template para o projeto
 Disponibiliza
  - package brunomsilva.smartgraph - com a API (JavaFX) SmartGraph para visualização de instancias de grafos (interface Graph)  e digrafos (interface Digraph)  
- - package adts.graph com a implementação do ADT Graph.
+ - package adts.graph com **uma** implementação do ADT Graph.
  - ficheiros de dados na diretoria inputfiles 
 
 ####Nota1: Implementação adicional do grafo 
