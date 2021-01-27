@@ -7,15 +7,15 @@ Disponibiliza
  - package adts.graph com **uma** implementação do ADT Graph.
  - ficheiros de dados na diretoria inputfiles 
 
-####Nota1: Implementação adicional do grafo 
+####Nota 1: Implementação adicional do grafo 
 - Deverá criar uma classe GraphAdjList que implementa a interface com.pa.proj2020.adts.graph.Graph usando como estrutura de dados a Listad e adjacencias 
 (ver slides da TP) 
 
-####Nota2: Classes que implementam o modelo da rede social  
+####Nota 2: Classes que implementam o modelo da rede social  
 - devem ser colocadas no package com.pa.proj2020.model
 
-####Nota3: Testes JUnit 
+####Nota 3: Testes JUnit 
 - devem ser gerados abaixo da diretoria Test seguindo a estrutura de packages da source
 
-#### Nota4: SmartGraphPanel
+#### Nota 4: SmartGraphPanel
 Ver README_SMARTGRAPH.md
